@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		337247951DE3B1B200E78953 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337247941DE3B1B200E78953 /* AppDelegate.swift */; };
 		337247971DE3B1B200E78953 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337247961DE3B1B200E78953 /* ViewController.swift */; };
-		3372479A1DE3B1B200E78953 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337247981DE3B1B200E78953 /* Main.storyboard */; };
+		3372479A1DE3B1B200E78953 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337247981DE3B1B200E78953 /* Main.storyboard */; settings = {ASSET_TAGS = (kjhk, ); }; };
 		3372479D1DE3B1B200E78953 /* CalorieCounter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3372479B1DE3B1B200E78953 /* CalorieCounter.xcdatamodeld */; };
 		3372479F1DE3B1B200E78953 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3372479E1DE3B1B200E78953 /* Assets.xcassets */; };
 		337247A21DE3B1B200E78953 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337247A01DE3B1B200E78953 /* LaunchScreen.storyboard */; };
 		337247AD1DE3B1B200E78953 /* CalorieCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337247AC1DE3B1B200E78953 /* CalorieCounterTests.swift */; };
 		337247B81DE3B1B200E78953 /* CalorieCounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337247B71DE3B1B200E78953 /* CalorieCounterUITests.swift */; };
+		8CA591C61DE4CBA600BA2926 /* CalorieCounterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA591C51DE4CBA600BA2926 /* CalorieCounterController.swift */; };
+		8CA591CC1DE4D88F00BA2926 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA591CB1DE4D88F00BA2926 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		337247B31DE3B1B200E78953 /* CalorieCounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalorieCounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		337247B71DE3B1B200E78953 /* CalorieCounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieCounterUITests.swift; sourceTree = "<group>"; };
 		337247B91DE3B1B200E78953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CA591C51DE4CBA600BA2926 /* CalorieCounterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalorieCounterController.swift; sourceTree = "<group>"; };
+		8CA591CB1DE4D88F00BA2926 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		337247881DE3B1B200E78953 = {
 			isa = PBXGroup;
 			children = (
+				8CA591CB1DE4D88F00BA2926 /* TableViewController.swift */,
 				337247931DE3B1B200E78953 /* CalorieCounter */,
 				337247AB1DE3B1B200E78953 /* CalorieCounterTests */,
 				337247B61DE3B1B200E78953 /* CalorieCounterUITests */,
@@ -101,6 +106,7 @@
 			children = (
 				337247941DE3B1B200E78953 /* AppDelegate.swift */,
 				337247961DE3B1B200E78953 /* ViewController.swift */,
+				8CA591C51DE4CBA600BA2926 /* CalorieCounterController.swift */,
 				337247981DE3B1B200E78953 /* Main.storyboard */,
 				3372479E1DE3B1B200E78953 /* Assets.xcassets */,
 				337247A01DE3B1B200E78953 /* LaunchScreen.storyboard */,
@@ -190,6 +196,9 @@
 		337247891DE3B1B200E78953 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					kjhk,
+				);
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = CSUMB;
@@ -259,8 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CA591C61DE4CBA600BA2926 /* CalorieCounterController.swift in Sources */,
 				337247971DE3B1B200E78953 /* ViewController.swift in Sources */,
 				3372479D1DE3B1B200E78953 /* CalorieCounter.xcdatamodeld in Sources */,
+				8CA591CC1DE4D88F00BA2926 /* TableViewController.swift in Sources */,
 				337247951DE3B1B200E78953 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +499,7 @@
 				337247BE1DE3B1B200E78953 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		337247BF1DE3B1B200E78953 /* Build configuration list for PBXNativeTarget "CalorieCounterTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +508,7 @@
 				337247C11DE3B1B200E78953 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		337247C21DE3B1B200E78953 /* Build configuration list for PBXNativeTarget "CalorieCounterUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +517,7 @@
 				337247C41DE3B1B200E78953 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
