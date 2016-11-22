@@ -15,6 +15,8 @@
 		337247A21DE3B1B200E78953 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337247A01DE3B1B200E78953 /* LaunchScreen.storyboard */; };
 		337247AD1DE3B1B200E78953 /* CalorieCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337247AC1DE3B1B200E78953 /* CalorieCounterTests.swift */; };
 		337247B81DE3B1B200E78953 /* CalorieCounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337247B71DE3B1B200E78953 /* CalorieCounterUITests.swift */; };
+		337247C81DE4C67000E78953 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337247C71DE4C67000E78953 /* RegisterPageViewController.swift */; };
+		337247CF1DE4DE8700E78953 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337247CE1DE4DE8700E78953 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		337247B31DE3B1B200E78953 /* CalorieCounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalorieCounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		337247B71DE3B1B200E78953 /* CalorieCounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieCounterUITests.swift; sourceTree = "<group>"; };
 		337247B91DE3B1B200E78953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		337247C71DE4C67000E78953 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
+		337247CE1DE4DE8700E78953 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				337247A01DE3B1B200E78953 /* LaunchScreen.storyboard */,
 				337247A31DE3B1B200E78953 /* Info.plist */,
 				3372479B1DE3B1B200E78953 /* CalorieCounter.xcdatamodeld */,
+				337247C91DE4C68800E78953 /* Supporting Files */,
 			);
 			path = CalorieCounter;
 			sourceTree = "<group>";
@@ -126,6 +131,15 @@
 				337247B91DE3B1B200E78953 /* Info.plist */,
 			);
 			path = CalorieCounterUITests;
+			sourceTree = "<group>";
+		};
+		337247C91DE4C68800E78953 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				337247CE1DE4DE8700E78953 /* LoginViewController.swift */,
+				337247C71DE4C67000E78953 /* RegisterPageViewController.swift */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				337247C81DE4C67000E78953 /* RegisterPageViewController.swift in Sources */,
 				337247971DE3B1B200E78953 /* ViewController.swift in Sources */,
 				3372479D1DE3B1B200E78953 /* CalorieCounter.xcdatamodeld in Sources */,
+				337247CF1DE4DE8700E78953 /* LoginViewController.swift in Sources */,
 				337247951DE3B1B200E78953 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
