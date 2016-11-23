@@ -1,0 +1,99 @@
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "2B3-Mh-igJ"; */
+"2B3-Mh-igJ.text" = "Date";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "3dc-jf-1nv"; */
+"3dc-jf-1nv.normalTitle" = "Register";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "4rW-Ma-TYW"; */
+"4rW-Ma-TYW.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Break"; ObjectID = "Aqc-4c-NIj"; */
+"Aqc-4c-NIj.text" = "Break";
+
+/* Class = "UILabel"; text = "Email:"; ObjectID = "AwO-rq-qo4"; */
+"AwO-rq-qo4.text" = "Email:";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "D32-ja-pae"; */
+"D32-ja-pae.text" = "Detail";
+
+/* Class = "UILabel"; text = "Password:"; ObjectID = "E2d-mW-qrI"; */
+"E2d-mW-qrI.text" = "Password:";
+
+/* Class = "UIButton"; normalTitle = "LOGOUT"; ObjectID = "EZN-md-Aiu"; */
+"EZN-md-Aiu.normalTitle" = "LOGOUT";
+
+/* Class = "UITableViewSection"; headerTitle = "Calories"; ObjectID = "EjU-Nd-uLA"; */
+"EjU-Nd-uLA.headerTitle" = "Calories";
+
+/* Class = "UITableViewSection"; headerTitle = "Meals"; ObjectID = "Frd-Ck-ify"; */
+"Frd-Ck-ify.headerTitle" = "Meals";
+
+/* Class = "UITextField"; placeholder = "Password:"; ObjectID = "GRZ-D4-tDv"; */
+"GRZ-D4-tDv.placeholder" = "Password:";
+
+/* Class = "UIViewController"; title = "LoginView"; ObjectID = "KMf-Op-emF"; */
+"KMf-Op-emF.title" = "LoginView";
+
+/* Class = "UIButton"; normalTitle = "LOGIN"; ObjectID = "LM7-aQ-krJ"; */
+"LM7-aQ-krJ.normalTitle" = "LOGIN";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "Nim-Jd-lKn"; */
+"Nim-Jd-lKn.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "LOGIN"; ObjectID = "PVD-No-BTJ"; */
+"PVD-No-BTJ.text" = "LOGIN";
+
+/* Class = "UIButton"; normalTitle = "I have an account."; ObjectID = "Pd9-lw-P7E"; */
+"Pd9-lw-P7E.normalTitle" = "I have an account.";
+
+/* Class = "UILabel"; text = "Password Repeat:"; ObjectID = "SzW-ru-WDD"; */
+"SzW-ru-WDD.text" = "Password Repeat:";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "VLY-Im-Bji"; */
+"VLY-Im-Bji.text" = "Subtitle";
+
+/* Class = "UITextField"; placeholder = "Repeat Password:"; ObjectID = "W6g-BS-tBa"; */
+"W6g-BS-tBa.placeholder" = "Repeat Password:";
+
+/* Class = "UILabel"; text = "Lunch"; ObjectID = "aNQ-DG-b7h"; */
+"aNQ-DG-b7h.text" = "Lunch";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "bTY-Jh-CDO"; */
+"bTY-Jh-CDO.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "d2n-ur-Lbu"; */
+"d2n-ur-Lbu.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "PROTECTED PAGE"; ObjectID = "gRX-7e-dbq"; */
+"gRX-7e-dbq.text" = "PROTECTED PAGE";
+
+/* Class = "UILabel"; text = "Password:"; ObjectID = "gUh-Fs-bLb"; */
+"gUh-Fs-bLb.text" = "Password:";
+
+/* Class = "UILabel"; text = "Dinner"; ObjectID = "jk7-gD-Mob"; */
+"jk7-gD-Mob.text" = "Dinner";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "lK9-Ie-NMn"; */
+"lK9-Ie-NMn.normalTitle" = "Register";
+
+/* Class = "UILabel"; text = "Total Calories"; ObjectID = "mbL-7e-Kk2"; */
+"mbL-7e-Kk2.text" = "Total Calories";
+
+/* Class = "UILabel"; text = "Register Page"; ObjectID = "sEG-GW-lbC"; */
+"sEG-GW-lbC.text" = "Register Page";
+
+/* Class = "UILabel"; text = "Email:"; ObjectID = "sbP-0e-Jv0"; */
+"sbP-0e-Jv0.text" = "Email:";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "sob-ZA-Kvd"; */
+"sob-ZA-Kvd.placeholder" = "Email";
+
+/* Class = "UITextField"; placeholder = "Email:"; ObjectID = "t6G-gZ-jem"; */
+"t6G-gZ-jem.placeholder" = "Email:";
+
+/* Class = "UILabel"; text = "Snacks"; ObjectID = "vut-2X-l7o"; */
+"vut-2X-l7o.text" = "Snacks";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "zAd-uW-7at"; */
+"zAd-uW-7at.placeholder" = "Password";

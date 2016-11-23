@@ -15,6 +15,8 @@
 		337247A21DE3B1B200E78953 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337247A01DE3B1B200E78953 /* LaunchScreen.storyboard */; };
 		337247AD1DE3B1B200E78953 /* CalorieCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337247AC1DE3B1B200E78953 /* CalorieCounterTests.swift */; };
 		337247B81DE3B1B200E78953 /* CalorieCounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337247B71DE3B1B200E78953 /* CalorieCounterUITests.swift */; };
+		337247C81DE4C67000E78953 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337247C71DE4C67000E78953 /* RegisterPageViewController.swift */; };
+		337247CF1DE4DE8700E78953 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337247CE1DE4DE8700E78953 /* LoginViewController.swift */; };
 		8CA591C61DE4CBA600BA2926 /* CalorieCounterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA591C51DE4CBA600BA2926 /* CalorieCounterController.swift */; };
 		8CA591CC1DE4D88F00BA2926 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA591CB1DE4D88F00BA2926 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -51,8 +53,11 @@
 		337247B31DE3B1B200E78953 /* CalorieCounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalorieCounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		337247B71DE3B1B200E78953 /* CalorieCounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieCounterUITests.swift; sourceTree = "<group>"; };
 		337247B91DE3B1B200E78953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		337247C71DE4C67000E78953 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
+		337247CE1DE4DE8700E78953 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8CA591C51DE4CBA600BA2926 /* CalorieCounterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalorieCounterController.swift; sourceTree = "<group>"; };
-		8CA591CB1DE4D88F00BA2926 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		8CA591CB1DE4D88F00BA2926 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
+		8CA591CE1DE50CB600BA2926 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +88,6 @@
 		337247881DE3B1B200E78953 = {
 			isa = PBXGroup;
 			children = (
-				8CA591CB1DE4D88F00BA2926 /* TableViewController.swift */,
 				337247931DE3B1B200E78953 /* CalorieCounter */,
 				337247AB1DE3B1B200E78953 /* CalorieCounterTests */,
 				337247B61DE3B1B200E78953 /* CalorieCounterUITests */,
@@ -104,6 +108,7 @@
 		337247931DE3B1B200E78953 /* CalorieCounter */ = {
 			isa = PBXGroup;
 			children = (
+				8CA591CB1DE4D88F00BA2926 /* TableViewController.swift */,
 				337247941DE3B1B200E78953 /* AppDelegate.swift */,
 				337247961DE3B1B200E78953 /* ViewController.swift */,
 				8CA591C51DE4CBA600BA2926 /* CalorieCounterController.swift */,
@@ -112,6 +117,7 @@
 				337247A01DE3B1B200E78953 /* LaunchScreen.storyboard */,
 				337247A31DE3B1B200E78953 /* Info.plist */,
 				3372479B1DE3B1B200E78953 /* CalorieCounter.xcdatamodeld */,
+				337247C91DE4C68800E78953 /* Supporting Files */,
 			);
 			path = CalorieCounter;
 			sourceTree = "<group>";
@@ -132,6 +138,15 @@
 				337247B91DE3B1B200E78953 /* Info.plist */,
 			);
 			path = CalorieCounterUITests;
+			sourceTree = "<group>";
+		};
+		337247C91DE4C68800E78953 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				337247CE1DE4DE8700E78953 /* LoginViewController.swift */,
+				337247C71DE4C67000E78953 /* RegisterPageViewController.swift */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +220,7 @@
 				TargetAttributes = {
 					337247901DE3B1B200E78953 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = VG4XU5DBK7;
 					};
 					337247A71DE3B1B200E78953 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -268,9 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CA591C61DE4CBA600BA2926 /* CalorieCounterController.swift in Sources */,
+				337247C81DE4C67000E78953 /* RegisterPageViewController.swift in Sources */,
 				337247971DE3B1B200E78953 /* ViewController.swift in Sources */,
+				8CA591C61DE4CBA600BA2926 /* CalorieCounterController.swift in Sources */,
 				3372479D1DE3B1B200E78953 /* CalorieCounter.xcdatamodeld in Sources */,
+				337247CF1DE4DE8700E78953 /* LoginViewController.swift in Sources */,
 				8CA591CC1DE4D88F00BA2926 /* TableViewController.swift in Sources */,
 				337247951DE3B1B200E78953 /* AppDelegate.swift in Sources */,
 			);
@@ -312,6 +330,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				337247991DE3B1B200E78953 /* Base */,
+				8CA591CE1DE50CB600BA2926 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -416,10 +435,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CalorieCounter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.csumb.CalorieCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -427,10 +449,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CalorieCounter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.csumb.CalorieCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
