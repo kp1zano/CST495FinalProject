@@ -34,6 +34,8 @@ class RegisterPageViewController: UIViewController {
         let userPassword = userPasswordTexField.text;
         let userRepeatedPassword = userRepeatPasswordTextField.text;
         
+        let storedEmails = NSUserDefaults.standardUserDefaults().stringForKey("userEmail");
+        
         /*
          * Check for empty fields.
          */
@@ -42,6 +44,16 @@ class RegisterPageViewController: UIViewController {
              * Send an alert message.
              */
             displayAlertMessage("All fields are required");
+            return;
+        }
+        /**
+         * Check if email already exists.
+         */
+        if(userEmail == storedEmails){
+            /**
+             * Send Error Message.
+             */
+            displayAlertMessage("Email already exists. Login to Proceed.");
             return;
         }
         
@@ -70,7 +82,7 @@ class RegisterPageViewController: UIViewController {
         /*
          * Display confirmation alert.
          */
-        let myAlert = UIAlertController(title: "Alert", message: "Profile Successfully Created", preferredStyle: UIAlertControllerStyle.Alert);
+        let myAlert = UIAlertController(title: "Success", message: "Profile Successfully Created", preferredStyle: UIAlertControllerStyle.Alert);
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default){
             action in self.dismissViewControllerAnimated(true, completion: nil);
             }
