@@ -17,7 +17,10 @@
 		337247B81DE3B1B200E78953 /* CalorieCounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337247B71DE3B1B200E78953 /* CalorieCounterUITests.swift */; };
 		337247C81DE4C67000E78953 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337247C71DE4C67000E78953 /* RegisterPageViewController.swift */; };
 		337247CF1DE4DE8700E78953 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337247CE1DE4DE8700E78953 /* LoginViewController.swift */; };
-		8CA591C61DE4CBA600BA2926 /* CalorieCounterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA591C51DE4CBA600BA2926 /* CalorieCounterController.swift */; };
+		8C11CBBA1DEA5B320003C6F0 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C11CBB91DEA5B320003C6F0 /* Food.swift */; };
+		8C11CBBC1DEA61600003C6F0 /* FoodHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C11CBBB1DEA61600003C6F0 /* FoodHeader.swift */; };
+		8C4B0D9B1DE8C1F6003590B7 /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4B0D9A1DE8C1F6003590B7 /* FoodTableViewController.swift */; };
+		8C4B0D9E1DE90599003590B7 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4B0D9D1DE90599003590B7 /* FoodCell.swift */; };
 		8CA591CC1DE4D88F00BA2926 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA591CB1DE4D88F00BA2926 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +58,10 @@
 		337247B91DE3B1B200E78953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		337247C71DE4C67000E78953 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
 		337247CE1DE4DE8700E78953 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		8CA591C51DE4CBA600BA2926 /* CalorieCounterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalorieCounterController.swift; sourceTree = "<group>"; };
+		8C11CBB91DEA5B320003C6F0 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		8C11CBBB1DEA61600003C6F0 /* FoodHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodHeader.swift; sourceTree = "<group>"; };
+		8C4B0D9A1DE8C1F6003590B7 /* FoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
+		8C4B0D9D1DE90599003590B7 /* FoodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodCell.swift; path = ../FoodCell.swift; sourceTree = "<group>"; };
 		8CA591CB1DE4D88F00BA2926 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
 		8CA591CE1DE50CB600BA2926 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,16 +114,16 @@
 		337247931DE3B1B200E78953 /* CalorieCounter */ = {
 			isa = PBXGroup;
 			children = (
-				8CA591CB1DE4D88F00BA2926 /* TableViewController.swift */,
+				337247C91DE4C68800E78953 /* Supporting Files */,
+				8C4B0D9C1DE90516003590B7 /* TableControllers */,
 				337247941DE3B1B200E78953 /* AppDelegate.swift */,
 				337247961DE3B1B200E78953 /* ViewController.swift */,
-				8CA591C51DE4CBA600BA2926 /* CalorieCounterController.swift */,
 				337247981DE3B1B200E78953 /* Main.storyboard */,
 				3372479E1DE3B1B200E78953 /* Assets.xcassets */,
 				337247A01DE3B1B200E78953 /* LaunchScreen.storyboard */,
 				337247A31DE3B1B200E78953 /* Info.plist */,
 				3372479B1DE3B1B200E78953 /* CalorieCounter.xcdatamodeld */,
-				337247C91DE4C68800E78953 /* Supporting Files */,
+				8C11CBB91DEA5B320003C6F0 /* Food.swift */,
 			);
 			path = CalorieCounter;
 			sourceTree = "<group>";
@@ -147,6 +153,17 @@
 				337247C71DE4C67000E78953 /* RegisterPageViewController.swift */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8C4B0D9C1DE90516003590B7 /* TableControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8CA591CB1DE4D88F00BA2926 /* TableViewController.swift */,
+				8C4B0D9D1DE90599003590B7 /* FoodCell.swift */,
+				8C4B0D9A1DE8C1F6003590B7 /* FoodTableViewController.swift */,
+				8C11CBBB1DEA61600003C6F0 /* FoodHeader.swift */,
+			);
+			name = TableControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,10 +303,13 @@
 			files = (
 				337247C81DE4C67000E78953 /* RegisterPageViewController.swift in Sources */,
 				337247971DE3B1B200E78953 /* ViewController.swift in Sources */,
-				8CA591C61DE4CBA600BA2926 /* CalorieCounterController.swift in Sources */,
 				3372479D1DE3B1B200E78953 /* CalorieCounter.xcdatamodeld in Sources */,
+				8C4B0D9B1DE8C1F6003590B7 /* FoodTableViewController.swift in Sources */,
 				337247CF1DE4DE8700E78953 /* LoginViewController.swift in Sources */,
+				8C11CBBA1DEA5B320003C6F0 /* Food.swift in Sources */,
+				8C4B0D9E1DE90599003590B7 /* FoodCell.swift in Sources */,
 				8CA591CC1DE4D88F00BA2926 /* TableViewController.swift in Sources */,
+				8C11CBBC1DEA61600003C6F0 /* FoodHeader.swift in Sources */,
 				337247951DE3B1B200E78953 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

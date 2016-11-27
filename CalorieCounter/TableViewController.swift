@@ -13,6 +13,7 @@ class TableViewController: UITableViewController {
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
     var datePickerHidden = true;
+    var mealType:String = "";
     @IBOutlet weak var totalCalories: UILabel!
     @IBOutlet weak var breakCalories: UILabel!
     @IBOutlet weak var lunchCalories: UILabel!
@@ -22,17 +23,19 @@ class TableViewController: UITableViewController {
 
     @IBAction func datePickerValue(sender: UIDatePicker) {
         datePickerChanged()
+
+
     }
     /*
      Changes datepicker label
      */
     func datePickerChanged () {
         
-       let dateFormatter = NSDateFormatter()
-       dateFormatter.dateFormat = "MM/dd/yyyy"
-       detailLabel.text = dateFormatter.stringFromDate(datePicker.date)
+        let dateFormatter = NSDateFormatter();
+       dateFormatter.dateFormat = "MM/dd/yyyy";
+        detailLabel.text = dateFormatter.stringFromDate(datePicker.date);
        //Debugin:
-        debugPrint(dateFormatter.stringFromDate(datePicker.date))
+        debugPrint(dateFormatter.stringFromDate(datePicker.date));
         
     }
     
@@ -42,6 +45,8 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         datePickerChanged()
+        self.title = "Home Page"
+       
     }
     
     /*
@@ -49,8 +54,27 @@ class TableViewController: UITableViewController {
      */
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 && indexPath.row == 0 {
-            toggleDatepicker()
+            toggleDatepicker();
+        }else if indexPath.section == 1{
+            switch indexPath.row {
+            case 0 :
+                //Section 1 (Meals): Breakfast
+                mealType = "BreakFast";
+                 performSegueWithIdentifier("calorieInsert", sender: self)
+            case 1 :
+                mealType = "Lunch";
+                 performSegueWithIdentifier("calorieInsert", sender: self)
+            case 2 :
+                mealType = "Dinner";
+                 performSegueWithIdentifier("calorieInsert", sender: self)
+            case 3 :
+                mealType = "Snacks";
+                 performSegueWithIdentifier("calorieInsert", sender: self)
+            default:
+                break
+            }
         }
+        
     }
     /*
      
@@ -65,7 +89,7 @@ class TableViewController: UITableViewController {
     }
     
     /*
-     
+     Hide table view
      */
     func toggleDatepicker() {
         
@@ -93,6 +117,16 @@ class TableViewController: UITableViewController {
          */
         if(!isUserLoggedIn){
             self.performSegueWithIdentifier("loginView", sender: self);
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "calorieInsert"){
+            debugPrint("before segue")
+            let navController = segue.destinationViewController as! UINavigationController;
+            let detailController = navController.topViewController as! FoodTableViewController;
+            detailController.date = detailLabel.text;
+            detailController.meal = mealType;
         }
     }
     
