@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		333097CF1DEC9BAD00B15AA4 /* BarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333097CE1DEC9BAD00B15AA4 /* BarcodeScannerViewController.swift */; };
 		337247951DE3B1B200E78953 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337247941DE3B1B200E78953 /* AppDelegate.swift */; };
 		337247971DE3B1B200E78953 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337247961DE3B1B200E78953 /* ViewController.swift */; };
 		3372479A1DE3B1B200E78953 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337247981DE3B1B200E78953 /* Main.storyboard */; settings = {ASSET_TAGS = (kjhk, ); }; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		333097CE1DEC9BAD00B15AA4 /* BarcodeScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewController.swift; sourceTree = "<group>"; };
 		337247911DE3B1B200E78953 /* CalorieCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalorieCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		337247941DE3B1B200E78953 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		337247961DE3B1B200E78953 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		337247C91DE4C68800E78953 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				333097CE1DEC9BAD00B15AA4 /* BarcodeScannerViewController.swift */,
 				337247CE1DE4DE8700E78953 /* LoginViewController.swift */,
 				337247C71DE4C67000E78953 /* RegisterPageViewController.swift */,
 			);
@@ -309,6 +312,7 @@
 				8C11CBBA1DEA5B320003C6F0 /* Food.swift in Sources */,
 				8C4B0D9E1DE90599003590B7 /* FoodCell.swift in Sources */,
 				8CA591CC1DE4D88F00BA2926 /* TableViewController.swift in Sources */,
+				333097CF1DEC9BAD00B15AA4 /* BarcodeScannerViewController.swift in Sources */,
 				8C11CBBC1DEA61600003C6F0 /* FoodHeader.swift in Sources */,
 				337247951DE3B1B200E78953 /* AppDelegate.swift in Sources */,
 			);

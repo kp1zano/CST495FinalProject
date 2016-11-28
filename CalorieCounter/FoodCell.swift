@@ -45,39 +45,19 @@ class FoodCell: UITableViewCell {
         return label
     }()
     
-    /*
-     Creates a button to remove foods.
-     */
-    let actionButton: UIButton = {
-        let button = UIButton(type: .System)
-        button.setTitle("Delete", forState: .Normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
     
     /*
      Adds all created views to the tableView, allong with the constraints
      */
     func setupViews() {
         addSubview(nameLabel)
-        addSubview(actionButton)
         addSubview(caloriesLabel)
-        
-        actionButton.addTarget(self, action: #selector(FoodCell.handleAction), forControlEvents: .TouchUpInside)
-        
-        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-16-[v0]-1-[v1]-1-[v2(80)]-8-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel, "v1": caloriesLabel, "v2": actionButton]))
-        
+
+        //TODO: Fix the alignment.
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-16-[v0]-235-[v1]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel, "v1": caloriesLabel]))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": caloriesLabel]))
-        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": actionButton]))
         
-    }
-    
-    /*
-    Deletes the cell seleted
-     */
-    func handleAction() {
-        myTableViewController?.deleteCell(self)
     }
     
 }
