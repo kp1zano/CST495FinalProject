@@ -206,11 +206,11 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="CCI-ej-zLW">
                                         <rect key="frame" x="0.0" y="726.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CCI-ej-zLW" id="vJ5-PY-nIL">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="CCI-ej-zLW" id="vJ5-PY-nIL">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0np-rt-PDH">
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0np-rt-PDH">
                                                     <rect key="frame" x="183" y="7" width="48" height="30"/>
                                                     <state key="normal" title="Logout"/>
                                                     <connections>
@@ -222,6 +222,8 @@
                                                 <constraint firstItem="0np-rt-PDH" firstAttribute="centerY" secondItem="vJ5-PY-nIL" secondAttribute="centerY" id="0FR-kh-2ge"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="0np-rt-PDH" secondAttribute="trailing" constant="81" id="DDd-q6-B48"/>
                                                 <constraint firstItem="0np-rt-PDH" firstAttribute="leading" secondItem="vJ5-PY-nIL" secondAttribute="leadingMargin" constant="175" id="GKW-X6-Pa4"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0np-rt-PDH" secondAttribute="trailing" constant="175" id="Kwe-JT-LrK"/>
+                                                <constraint firstItem="0np-rt-PDH" firstAttribute="centerY" secondItem="vJ5-PY-nIL" secondAttribute="centerY" id="i8C-lS-r6O"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
