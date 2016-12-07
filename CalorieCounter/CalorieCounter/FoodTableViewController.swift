@@ -21,12 +21,12 @@ class FoodTableViewController: UITableViewController {
          * FIXME: Replace with Boolean Test.
          */
         super.viewDidLoad()
-        if let mealType = meal{
+        if meal != nil{
             self.title = meal! + " Calories"
             debugPrint(navigationItem.title)
 
         }
-        if let dateString = date{
+        if date != nil{
         
         }
         foods.append(Food(name: "Pizza", calories: "9"));
