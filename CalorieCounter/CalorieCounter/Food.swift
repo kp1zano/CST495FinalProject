@@ -5,7 +5,9 @@
 //  Created by Yarely on 11/26/16.
 //  Copyright © 2016 CSUMB. All rights reserved.
 
-class Food{
+import Foundation
+
+class Food: NSObject, NSCoding {
     
     var name:String;
     var calories:String
@@ -15,9 +17,24 @@ class Food{
         self.calories = calories;
     }
     
-    init(){
+    override init(){
         name = "";
         calories = "";
+    }
+    
+    /*
+     * Here I added some decode/encode functionality to the class so we can convert to NSData
+     * This allows us the ability to save it in NSUserDefaults
+     */
+    
+    required init(coder aDecoder: NSCoder) {
+        name = aDecoder.decodeObjectForKey("name") as! String
+        calories = aDecoder.decodeObjectForKey("calories") as! String
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(name, forKey: "name")
+        aCoder.encodeObject(calories, forKey: "calories")
     }
 
 }

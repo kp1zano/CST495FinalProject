@@ -13,6 +13,7 @@ class FoodTableViewController: UITableViewController {
     var date:String?
     var meal:String?
     var foods = [Food]()
+    var username:String?
     
     override func viewDidLoad() {
     
@@ -29,8 +30,25 @@ class FoodTableViewController: UITableViewController {
         if date != nil{
         
         }
-        foods.append(Food(name: "Pizza", calories: "9"));
-        foods.append(Food(name: "Pizza", calories: "9"));
+        
+        /*
+         * Here I load the username to use as part of the key for saving the current foods along with the name of the current view
+         * This keeps the key uniq to the view and thus we don't get overlap between tables
+         */
+        
+        username = NSUserDefaults.standardUserDefaults().stringForKey("userEmail")
+        print("TITLE : \(self.title)")
+        print("KEY: foods\(username)\(self.title)")
+        
+        
+        if let loadedDataFoods = NSUserDefaults.standardUserDefaults().dataForKey("foods\(username)\(self.title)") {
+            
+            if let loadedFoods = NSKeyedUnarchiver.unarchiveObjectWithData(loadedDataFoods) as? [Food] {
+                print("Loaded data from userDefaults \(loadedFoods)")
+                foods = loadedFoods
+            }
+        }
+        
 
         /*
          Resigtering classes that will be used for FoodTAbleViewController
@@ -72,9 +90,12 @@ class FoodTableViewController: UITableViewController {
     
     
     /*
-     Dismiss controller to return back to home page
+     * Dismiss controller to return back to home page
+     * Also save the current state of the table in NSUserDefaults
      */
     func back() {
+         let data : NSData = NSKeyedArchiver.archivedDataWithRootObject(foods)
+         NSUserDefaults.standardUserDefaults().setObject(data, forKey: "foods\(username)\(self.title)")
          self.dismissViewControllerAnimated(true, completion: nil);
     }
     
