@@ -138,9 +138,39 @@ class FoodTableViewController: UITableViewController {
          * Edit option.
          * TODO: Implement Editing.
          */
+        
+        let name = foods[indexPath.row].name
+        let cal = foods[indexPath.row].calories
+        
         let editAction = UIAlertAction(title: "Edit", style: .Default, handler: {
             (alert: UIAlertAction!) -> Void in
             print("File Was Edited");
+            
+            /*
+             * Create popUp that presents two textViews to edit the item selected
+             * The preset text is the current data
+             */
+            
+            let popUp = UIAlertController(title: "Edit Item", message: "Edit name and/or calorie count", preferredStyle: .Alert)
+            popUp.addTextFieldWithConfigurationHandler({ (textField) -> Void in textField.text = "\(name)" })
+            popUp.addTextFieldWithConfigurationHandler({ (textField) -> Void in textField.text = "\(cal)" })
+            
+            popUp.addAction(UIAlertAction(title: "Save", style: .Default, handler: { [weak popUp] (action) -> Void in
+                let nameField = popUp!.textFields![0] as UITextField
+                let calField = popUp!.textFields![1] as UITextField
+                
+                print("Text field: \(nameField.text)")
+                print("Text field: \(calField.text)")
+                	
+                self.foods[indexPath.row].name = nameField.text!
+                self.foods[indexPath.row].calories = calField.text!
+                self.tableView.reloadData()
+            }))
+            
+            popUp.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: nil))
+            
+            self.presentViewController(popUp, animated: true, completion: nil)
+            
             
         })
         
