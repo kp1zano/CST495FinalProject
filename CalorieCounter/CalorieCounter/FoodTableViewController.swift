@@ -83,10 +83,30 @@ class FoodTableViewController: UITableViewController {
     Todo: launch a new page to input name and calores or QRcode reader
      */
     func insertFoodName() {
-        foods.append(Food(name: "Coffee", calories: "18"));
-        let insertionIndexPath = NSIndexPath(forRow: foods.count - 1, inSection: 0)
-       debugPrint(insertionIndexPath)
-        tableView.insertRowsAtIndexPaths([insertionIndexPath], withRowAnimation: .Right)
+        /*
+         * Similar popUp for editing the attributes for adding a new item
+         */
+        
+        let popUp = UIAlertController(title: "Add Item", message: "Name / Calorie count", preferredStyle: .Alert)
+        popUp.addTextFieldWithConfigurationHandler({ (textField) -> Void in textField.text = "name" })
+        popUp.addTextFieldWithConfigurationHandler({ (textField) -> Void in textField.text = "calories";
+        textField.keyboardType = UIKeyboardType.NumberPad})
+        
+        popUp.addAction(UIAlertAction(title: "Save", style: .Default, handler: { [weak popUp] (action) -> Void in
+            let nameField = popUp!.textFields![0] as UITextField
+            let calField = popUp!.textFields![1] as UITextField
+            
+            print("Text field: \(nameField.text)")
+            print("Text field: \(calField.text)")
+            
+            self.foods.append(Food(name: nameField.text!, calories: calField.text!));
+            let insertionIndexPath = NSIndexPath(forRow: self.foods.count - 1, inSection: 0)
+            self.tableView.insertRowsAtIndexPaths([insertionIndexPath], withRowAnimation: .Right)
+            }))
+        
+        popUp.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: nil))
+        
+        self.presentViewController(popUp, animated: true, completion: nil)
     }
     
     /*
@@ -153,7 +173,8 @@ class FoodTableViewController: UITableViewController {
             
             let popUp = UIAlertController(title: "Edit Item", message: "Edit name and/or calorie count", preferredStyle: .Alert)
             popUp.addTextFieldWithConfigurationHandler({ (textField) -> Void in textField.text = "\(name)" })
-            popUp.addTextFieldWithConfigurationHandler({ (textField) -> Void in textField.text = "\(cal)" })
+            popUp.addTextFieldWithConfigurationHandler({ (textField) -> Void in textField.text = "\(cal)";
+                textField.keyboardType = UIKeyboardType.NumberPad })
             
             popUp.addAction(UIAlertAction(title: "Save", style: .Default, handler: { [weak popUp] (action) -> Void in
                 let nameField = popUp!.textFields![0] as UITextField
