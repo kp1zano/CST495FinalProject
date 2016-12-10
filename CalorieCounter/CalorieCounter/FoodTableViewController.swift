@@ -27,9 +27,6 @@ class FoodTableViewController: UITableViewController {
             debugPrint(navigationItem.title)
 
         }
-        if date != nil{
-        
-        }
         
         /*
          * Here I load the username to use as part of the key for saving the current foods along with the name of the current view
@@ -40,14 +37,17 @@ class FoodTableViewController: UITableViewController {
         print("TITLE : \(self.title)")
         print("KEY: foods\(username)\(self.title)")
         
+        let helper = Helper()
+        let date = NSUserDefaults.standardUserDefaults().valueForKey("date") as! String
         
-        if let loadedDataFoods = NSUserDefaults.standardUserDefaults().dataForKey("foods\(username)\(self.title)") {
-            
-            if let loadedFoods = NSKeyedUnarchiver.unarchiveObjectWithData(loadedDataFoods) as? [Food] {
-                print("Loaded data from userDefaults \(loadedFoods)")
-                foods = loadedFoods
-            }
-        }
+        print("DATE: \(date)")
+        print("TITLE: \(self.title!)")
+        print("ENUM: \(Helper.TIMES.breakfast.rawValue)")
+        print("ENUM: \(Helper.TIMES.lunch.rawValue)")
+        print("ENUM: \(Helper.TIMES.dinner.rawValue)")
+        print("ENUM: \(Helper.TIMES.snack.rawValue)")
+        
+        foods = helper.loadFoodList(date, type: self.title!)
         
 
         /*
@@ -94,9 +94,10 @@ class FoodTableViewController: UITableViewController {
      * Also save the current state of the table in NSUserDefaults
      */
     func back() {
-         let data : NSData = NSKeyedArchiver.archivedDataWithRootObject(foods)
-         NSUserDefaults.standardUserDefaults().setObject(data, forKey: "foods\(username)\(self.title)")
-         self.dismissViewControllerAnimated(true, completion: nil);
+        
+        let helper = Helper()
+        helper.saveFoodList(self.foods, date: NSUserDefaults.standardUserDefaults().valueForKey("date") as! String, type: self.title!)
+        self.dismissViewControllerAnimated(true, completion: nil);
     }
     
     /*

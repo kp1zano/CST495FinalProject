@@ -18,6 +18,7 @@
 		337247B81DE3B1B200E78953 /* CalorieCounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337247B71DE3B1B200E78953 /* CalorieCounterUITests.swift */; };
 		337247C81DE4C67000E78953 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337247C71DE4C67000E78953 /* RegisterPageViewController.swift */; };
 		337247CF1DE4DE8700E78953 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337247CE1DE4DE8700E78953 /* LoginViewController.swift */; };
+		5BA5616C1DFB77830043894F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA5616B1DFB77830043894F /* Helper.swift */; };
 		8C11CBBA1DEA5B320003C6F0 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C11CBB91DEA5B320003C6F0 /* Food.swift */; };
 		8C11CBBC1DEA61600003C6F0 /* FoodHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C11CBBB1DEA61600003C6F0 /* FoodHeader.swift */; };
 		8C4B0D9B1DE8C1F6003590B7 /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4B0D9A1DE8C1F6003590B7 /* FoodTableViewController.swift */; };
@@ -60,6 +61,7 @@
 		337247B91DE3B1B200E78953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		337247C71DE4C67000E78953 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
 		337247CE1DE4DE8700E78953 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5BA5616B1DFB77830043894F /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		8C11CBB91DEA5B320003C6F0 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		8C11CBBB1DEA61600003C6F0 /* FoodHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodHeader.swift; sourceTree = "<group>"; };
 		8C4B0D9A1DE8C1F6003590B7 /* FoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				337247A31DE3B1B200E78953 /* Info.plist */,
 				3372479B1DE3B1B200E78953 /* CalorieCounter.xcdatamodeld */,
 				8C11CBB91DEA5B320003C6F0 /* Food.swift */,
+				5BA5616B1DFB77830043894F /* Helper.swift */,
 			);
 			path = CalorieCounter;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				333097CF1DEC9BAD00B15AA4 /* BarcodeScannerViewController.swift in Sources */,
 				8C11CBBC1DEA61600003C6F0 /* FoodHeader.swift in Sources */,
 				337247951DE3B1B200E78953 /* AppDelegate.swift in Sources */,
+				5BA5616C1DFB77830043894F /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
