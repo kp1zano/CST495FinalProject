@@ -28,15 +28,23 @@ class Helper {
     func loadFoodList(date: String,  type: String) -> [Food] {
         var result = [Food]()
         
-        if let loadedDataFoods = NSUserDefaults.standardUserDefaults().dataForKey("foods\(username!)\(type)\(date)") {
+        if let user = username{
             
-            if let loadedFoods = NSKeyedUnarchiver.unarchiveObjectWithData(loadedDataFoods) as? [Food] {
-                print("Loaded data from userDefaults BREAKFAST \(loadedFoods)")
-                result = loadedFoods
+            if let loadedDataFoods = NSUserDefaults.standardUserDefaults().dataForKey("foods\(user)\(type)\(date)") {
+                
+                if let loadedFoods = NSKeyedUnarchiver.unarchiveObjectWithData(loadedDataFoods) as? [Food] {
+                    print("Loaded data from userDefaults BREAKFAST \(loadedFoods)")
+                    result = loadedFoods
+                }
             }
+            print("LOADED ATTEMPT: foods\(username!)\(type)\(date)")
+
+            
         }
+        print("LOADED ATTEMPT: foods\(type)\(date)")
+
         
-        print("LOADED ATTEMPT: foods\(username!)\(type)\(date)")
+        
         return result
         
     }

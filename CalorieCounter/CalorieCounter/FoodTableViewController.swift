@@ -121,6 +121,12 @@ class FoodTableViewController: UITableViewController {
             print("Text field: \(nameField.text)")
             print("Text field: \(calField.text)")
             
+            var sd: String = nameFiled.text!
+            print(nameField.text.dynamicType)
+            
+//            print(sd);
+
+            
             self.foods.append(Food(name: nameField.text!, calories: calField.text!));
             let insertionIndexPath = NSIndexPath(forRow: self.foods.count - 1, inSection: 0)
             self.tableView.insertRowsAtIndexPaths([insertionIndexPath], withRowAnimation: .Right)
