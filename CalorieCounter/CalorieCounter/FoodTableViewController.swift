@@ -121,7 +121,7 @@ class FoodTableViewController: UITableViewController {
             print("Text field: \(nameField.text)")
             print("Text field: \(calField.text)")
             
-            var sd: String = nameFiled.text!
+          //  var sd: String = nameFiled.text!
             print(nameField.text.dynamicType)
             
 //            print(sd);
